@@ -2,9 +2,30 @@
 ---
 
 @use 'main
-{%- if jekyll.environment == 'production' -%}
+{%- if jekyll.environment == ' production ' -%}
   .bundle
 {%- endif -%}
 ';
 
 /* append your custom style below */
+
+// Dark theme
+html:not([data-mode]),
+html[data-mode='dark'] {
+  --main-bg: #131416;
+  --topbar-bg: #131416;
+  --sidebar-bg: #0c0c0e;
+  --sidebar-active-color: #17b2f4;
+}
+
+// Light theme
+html[data-mode='light'] {
+  --sidebar-active-color: #008bc7;
+}
+
+// Both themes
+// html:not([data-mode]),
+// html[data-mode='dark'],
+// html[data-mode='light'] {
+//   --sidebar-active-color: #008bc7;
+// }
